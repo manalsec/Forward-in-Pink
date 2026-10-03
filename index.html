@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="دربك وردي تجربة تفاعلية مجتمعية للتوعية بسرطان الثدي 2026">
+  <meta name="theme-color" content="#1e1c3d">
+  <title>دربك وردي | التوعية بسرطان الثدي 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="header-side header-right">
+      <img src="tvtc-logo-white.png" class="institution-logo" alt="شعار المؤسسة">
+      <div class="header-copy">
+        <strong>الشهر العالمي للتوعية بسرطان الثدي</strong>
+        <span>أكتوبر 2026</span>
+      </div>
+    </div>
+
+    <div class="header-side header-left">
+      <div class="header-copy college-copy">
+        <strong>دربك وردي</strong>
+        <span>الكلية التقنية الرقمية للبنات بتبوك</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <span>إعداد وتصميم | منال بنت مهجع العنزي</span>
+  </footer>
+
+
+  <!-- قياس الأثر عبر Google Analytics 4
+       بعد إنشاء Web Data Stream استبدلي G-XXXXXXXXXX بمعرّف القياس الخاص بالمشروع -->
+  <script>
+    window.DARBIK_GA_ID = 'G-XXXXXXXXXX'
+  </script>
+  <script async id="ga-loader"></script>
+  <script>
+    (function () {
+      const id = window.DARBIK_GA_ID
+      if (!id || id === 'G-XXXXXXXXXX') return
+
+      const loader = document.getElementById('ga-loader')
+      loader.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id)
+
+      window.dataLayer = window.dataLayer || []
+      window.gtag = function(){ dataLayer.push(arguments) }
+      gtag('js', new Date())
+      gtag('config', id, {
+        send_page_view: true
+      })
+    })()
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>

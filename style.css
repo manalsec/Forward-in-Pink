@@ -1,0 +1,318 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+:root{
+  --pink:#f74daa;
+  --pink-soft:#ff9ed3;
+  --plum:#551c43;
+  --navy:#1e1c3d;
+  --paper:#fff8fc;
+  --text:#ffffff;
+  --muted:#e8cadf;
+  --line:#ffffff24;
+  --glass:#ffffff0d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:"Tajawal",system-ui,sans-serif;
+  color:var(--text);
+  background:var(--navy);
+  overflow-x:hidden
+}
+button,a{font-family:inherit}
+button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.ambient{
+  position:fixed;inset:0;z-index:-3;
+  background:
+    radial-gradient(circle at 12% 18%,#f74daa4a,transparent 26%),
+    radial-gradient(circle at 88% 72%,#8c285f52,transparent 31%),
+    linear-gradient(145deg,#1e1c3d 0%,#321738 52%,#1e1c3d 100%)
+}
+.ambient:after{
+  content:"";position:absolute;inset:0;opacity:.22;
+  background-image:radial-gradient(#fff 1px,transparent 1px);
+  background-size:32px 32px;
+  mask-image:linear-gradient(to bottom,#000,transparent 85%)
+}
+.site-header{
+  min-height:88px;padding:12px clamp(16px,5vw,72px);
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  border-bottom:1px solid var(--line);
+  background:#1e1c3db8;backdrop-filter:blur(18px);
+  position:sticky;top:0;z-index:20
+}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.logo{width:62px;height:62px;object-fit:contain;background:white;border-radius:15px;padding:5px}
+.brand-copy{display:flex;flex-direction:column;gap:4px;min-width:0}
+.brand-copy strong{font-size:15px}
+.brand-copy span{font-size:12px;color:var(--muted)}
+.campaign-mark{display:flex;align-items:center;gap:9px;font-weight:800;color:#ffd4ec;white-space:nowrap}
+.mini-ribbon,.hero-ribbon{
+  display:inline-block;position:relative;transform:rotate(-8deg)
+}
+.mini-ribbon{width:22px;height:34px}
+.hero-ribbon{width:82px;height:126px;margin:8px auto 18px;filter:drop-shadow(0 18px 28px #f74daa55)}
+.mini-ribbon:before,.hero-ribbon:before{
+  content:"";position:absolute;inset:0;
+  border:7px solid var(--pink);border-radius:50% 50% 46% 46%;
+  transform:rotate(28deg)
+}
+.mini-ribbon:after,.hero-ribbon:after{
+  content:"";position:absolute;background:var(--pink);
+  width:7px;height:75%;left:48%;top:36%;border-radius:20px;
+  box-shadow:16px 10px 0 var(--pink);transform:rotate(-18deg)
+}
+.hero-ribbon:before{border-width:20px}
+.hero-ribbon:after{width:18px;box-shadow:40px 22px 0 var(--pink)}
+main{min-height:calc(100vh - 148px);display:grid;place-items:center;padding:38px 18px 104px}
+.screen{width:min(980px,100%);animation:enter .42s ease both}
+.hero{text-align:center;padding:22px 0}
+.eyebrow{color:var(--pink-soft);font-weight:800;letter-spacing:.4px}
+.hero h1{
+  font-size:clamp(58px,10vw,112px);line-height:.95;margin:12px 0 20px;
+  background:linear-gradient(90deg,#fff,#ff9ed3 48%,#fff);
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.hero .intro{font-size:clamp(19px,2.5vw,27px);line-height:1.9;color:#f5dbea;margin:0 auto 28px;max-width:760px}
+.hero-meta{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:22px}
+.pill{padding:8px 13px;border-radius:999px;background:#ffffff0c;border:1px solid var(--line);color:#efd7e6;font-size:13px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:0;border-radius:999px;padding:15px 27px;
+  font-size:17px;font-weight:800;cursor:pointer;text-decoration:none;
+  background:var(--pink);color:#fff;box-shadow:0 12px 34px #f74daa40;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 38px #f74daa58}
+.btn.secondary{background:#ffffff10;border:1px solid #ffffff2c;box-shadow:none}
+.btn.ghost{background:transparent;border:1px solid #ffffff2c;box-shadow:none}
+.progress-wrap{margin-bottom:20px}
+.progress-top{display:flex;align-items:center;justify-content:space-between;color:#eacfe1;font-size:13px;margin-bottom:9px}
+.progress{display:flex;gap:7px}
+.progress i{height:7px;flex:1;background:#ffffff15;border-radius:99px;transition:.25s}
+.progress i.on{background:linear-gradient(90deg,var(--plum),var(--pink));box-shadow:0 0 15px #f74daa75}
+.card{
+  background:linear-gradient(145deg,#ffffff10,#ffffff08);
+  border:1px solid #ffffff22;border-radius:30px;
+  padding:clamp(24px,5vw,52px);box-shadow:0 30px 90px #0005;
+  backdrop-filter:blur(20px)
+}
+.card h2{font-size:clamp(31px,5vw,50px);line-height:1.25;margin:6px 0 13px}
+.lead{font-size:18px;line-height:1.9;color:var(--muted);margin:0}
+.question{
+  margin:30px 0 22px;padding:25px;border-radius:22px;
+  font-size:clamp(22px,4vw,34px);font-weight:800;line-height:1.55;
+  background:#ffffff0a;border:1px solid #ffffff1c
+}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.choice,.tag{
+  border:1px solid #ffffff29;background:#ffffff0b;color:#fff;
+  cursor:pointer;transition:.2s
+}
+.choice{padding:18px;border-radius:18px;font-size:18px;font-weight:800}
+.choice:hover,.tag:hover{border-color:var(--pink);background:#f74daa18;transform:translateY(-1px)}
+.choice:disabled{cursor:default;opacity:.62;transform:none}
+.feedback{
+  margin-top:20px;padding:19px 20px;border-radius:19px;
+  background:#f74daa16;border:1px solid #f74daa55;
+  font-size:17px;line-height:1.9
+}
+.feedback strong{color:#ffc3e5;font-size:19px}
+.hidden{display:none}
+.tags{display:flex;flex-wrap:wrap;gap:11px;margin:25px 0}
+.tag{border-radius:999px;padding:13px 18px;font-size:16px;font-weight:700}
+.tag.seen{background:#f74daa25;border-color:var(--pink)}
+.tag.seen:after{content:" ✓"}
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:25px}
+.notice{margin-top:24px;color:#d9bed1;font-size:13px;line-height:1.8}
+.counter{color:#ffb9df;font-weight:800;margin-bottom:5px}
+.share-card{
+  position:relative;overflow:hidden;
+  background:linear-gradient(145deg,#fff,#ffe7f4);
+  color:var(--navy);padding:34px 26px;border-radius:27px;text-align:center;margin-bottom:28px
+}
+.share-card:before,.share-card:after{
+  content:"";position:absolute;border-radius:50%;background:#f74daa18
+}
+.share-card:before{width:170px;height:170px;right:-55px;top:-70px}
+.share-card:after{width:120px;height:120px;left:-45px;bottom:-55px}
+.share-card .badge-ribbon{font-size:48px}
+.share-card h2{font-size:clamp(28px,5vw,44px);margin:9px 0}
+.share-card p{font-size:18px;line-height:1.8}
+.share-card .college{font-size:13px;color:#66556a;margin-top:18px}
+.evaluation{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;margin-top:8px}
+.qr-wrap{background:#fff;padding:10px;border-radius:20px;box-shadow:0 15px 45px #0003}
+.qr{display:block;width:190px;height:190px}
+.source-box{margin-top:24px;padding-top:18px;border-top:1px solid #ffffff1b;font-size:12px;color:#cdb4c5;line-height:1.8}
+.source-box a{color:#ffd0ea}
+.site-footer{
+  min-height:60px;display:grid;place-items:center;padding:12px 18px;
+  border-top:1px solid var(--line);color:#dfc5d6;font-size:13px;
+  position:fixed;bottom:0;left:0;right:0;z-index:30;
+  background:#1e1c3dea;backdrop-filter:blur(16px)
+}
+@keyframes enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(max-width:720px){
+  .site-header{min-height:76px;padding:10px 14px}
+  .logo{width:50px;height:50px}
+  .brand-copy strong{font-size:12px}
+  .brand-copy span{font-size:10px}
+  .campaign-mark>span:last-child{display:none}
+  main{padding-top:25px}
+  .choices,.evaluation{grid-template-columns:1fr}
+  .qr-wrap{justify-self:center}
+  .card{border-radius:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+
+.source-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  margin-top:20px;padding:8px 12px;border-radius:999px;
+  border:1px solid #ffffff24;background:#ffffff0a;
+  color:#ffd2eb;text-decoration:none;font-size:12px;font-weight:700;
+  transition:.2s
+}
+.source-badge:hover{border-color:var(--pink);background:#f74daa16}
+.references{
+  margin-top:30px;padding-top:26px;border-top:1px solid #ffffff20
+}
+.references h3{font-size:23px;margin:7px 0 5px}
+.references>p{color:#d8bfd0;line-height:1.8;margin:0 0 16px}
+.reference-list{display:grid;gap:10px}
+.reference-list a{
+  display:flex;flex-direction:column;gap:5px;
+  padding:16px 18px;border-radius:17px;
+  border:1px solid #ffffff20;background:#ffffff08;
+  color:#fff;text-decoration:none;transition:.2s
+}
+.reference-list a:hover{border-color:var(--pink);background:#f74daa12;transform:translateY(-1px)}
+.reference-list strong{color:#ffc5e6;font-size:15px}
+.reference-list span{color:#ddc7d5;font-size:13px;line-height:1.7}
+.reference-note{font-size:12px!important;margin-top:14px!important;color:#bfa9b8!important}
+
+
+/* الهوية العلوية المحدثة */
+.site-header{
+  direction:rtl;
+  min-height:92px;
+  padding:12px clamp(18px,5vw,74px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px
+}
+.header-side{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-width:0
+}
+.header-right{justify-content:flex-start}
+.header-left{justify-content:flex-end;text-align:left}
+.institution-logo{
+  width:74px;
+  height:64px;
+  object-fit:contain;
+  background:#fff;
+  border-radius:16px;
+  padding:6px;
+  flex:none
+}
+.header-copy{
+  display:flex;
+  flex-direction:column;
+  gap:5px
+}
+.header-copy strong{
+  color:#fff;
+  font-size:15px;
+  font-weight:800
+}
+.header-copy span{
+  color:#dfc4d7;
+  font-size:12px;
+  line-height:1.55
+}
+.college-copy strong{
+  color:#ffb5dd;
+  font-size:17px
+}
+.college-copy span{
+  color:#fff
+}
+
+/* الشعار الرسمي المرفق */
+.official-campaign-logo{
+  display:block;
+  width:min(590px,88vw);
+  max-height:265px;
+  object-fit:contain;
+  margin:2px auto 24px;
+  filter:drop-shadow(0 18px 34px #f74daa35)
+}
+.hero .intro{
+  margin-top:0
+}
+
+@media(max-width:720px){
+  .site-header{
+    min-height:82px;
+    padding:9px 12px;
+    gap:10px
+  }
+  .institution-logo{
+    width:55px;
+    height:51px;
+    border-radius:12px;
+    padding:4px
+  }
+  .header-copy strong{font-size:11px}
+  .header-copy span{font-size:9px}
+  .college-copy strong{font-size:12px}
+  .header-left{max-width:46%}
+  .header-right{max-width:52%}
+  .official-campaign-logo{
+    width:min(470px,94vw);
+    max-height:205px;
+    margin-bottom:18px
+  }
+}
+
+
+/* إصلاح شعار المؤسسة باستخدام الملف الأصلي المرفق */
+.institution-logo{
+  width:190px;
+  height:66px;
+  object-fit:contain;
+  object-position:right center;
+  background:transparent!important;
+  border-radius:0!important;
+  padding:0!important;
+  filter:none!important
+}
+
+@media(max-width:720px){
+  .institution-logo{
+    width:126px;
+    height:46px
+  }
+}
+
+
+/* V7 — الشعارات الأصلية */
+.institution-logo{
+  opacity:1!important;
+  filter:none!important;
+  mix-blend-mode:normal!important
+}
+.official-campaign-logo{
+  image-rendering:auto;
+  opacity:1;
+  filter:drop-shadow(0 16px 30px #f74daa28)
+}
