@@ -304,18 +304,7 @@ main{min-height:calc(100vh - 148px);display:grid;place-items:center;padding:38px
   }
 }
 
-.medical-note {
-  margin-top: 14px;
-  padding: 12px 16px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.8;
-  color: #fff;
-  background: rgba(247, 77, 170, 0.08);
-  border: 1px solid rgba(247, 77, 170, 0.35);
-  border-radius: 14px;
-}
+
 
 /*   الشعارات الأصلية */
 .institution-logo{
