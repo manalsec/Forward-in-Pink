@@ -212,12 +212,15 @@ function renderSigns(){
 function seeSign(i){
   state.seenSigns.add(i)
   document.querySelector(`#sign-${i}`).classList.add('seen')
-  const f=document.querySelector('#sign-feedback')
+
+  const f = document.querySelector('#sign-feedback')
   f.classList.remove('hidden')
-  f.innerHTML=state.seenSigns.size===signs.length
-    ? `<strong>اكتشفت كل التغيرات 🌷</strong><br>
-    <div class="medical-note"> وجود أي تغيّر لا يعني بالضرورة وجود سرطان، وعند ملاحظة أي تغيّرات يُنصح بأخذ استشارة طبية 🩺 </div>
-    : `تم اكتشاف ${state.seenSigns.size} من ${signs.length}<br>وجود تغير لا يعني بالضرورة وجود سرطان لكنه يستحق الانتباه والتقييم عند الحاجة`
+
+  f.innerHTML = state.seenSigns.size === signs.length
+    ? `<strong>🌷 اكتشفت كل التغيّرات</strong><br><br>
+       وجود أي تغيّر لا يعني بالضرورة وجود سرطان، وعند ملاحظة أي تغيّرات يُنصح بأخذ استشارة طبية 🩺`
+    : `تغيّر لا يعني بالضرورة وجود سرطان لكنه يستحق الانتباه والتقييم عند الحاجة<br>
+       تم اكتشاف ${state.seenSigns.size} من ${signs.length}`
 }
 
 function renderMyths(){
