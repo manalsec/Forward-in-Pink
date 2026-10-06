@@ -217,7 +217,7 @@ function seeSign(i){
   f.classList.remove('hidden')
 
   f.innerHTML = state.seenSigns.size === signs.length
-    ? `<strong>🌷 اكتشفت كل التغيّرات</strong><br><br>
+    ? `<strong>🌷 اكتشفت كل التغيّرات</strong><br>
        وجود أي تغيّر لا يعني بالضرورة وجود سرطان، وعند ملاحظة أي تغيّرات يُنصح بأخذ استشارة طبية 🩺`
     : `تغيّر لا يعني بالضرورة وجود سرطان لكنه يستحق الانتباه والتقييم عند الحاجة<br>
        تم اكتشاف ${state.seenSigns.size} من ${signs.length}`
